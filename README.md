@@ -9,11 +9,13 @@ The CompTIA Security+ Practice Quiz V1.0 is an interactive and educational appli
 - **Question Images**: Some questions include relevant images to enhance your learning experience.
 - **Music Accompaniment**: Set the mood for studying with classical music that can be played, paused, and randomized.
 - **Review and Timer**: Review your answers and track the time you spend on each quiz.
+- **Generate Full Exam**: Create a complete, timed, and randomized exam with questions from all chapters for a comprehensive practice experience.
 - **Responsive Design**: Enjoy a consistent experience on screens of different sizes.
+
 
 ## Getting Started
 1. Clone or download this repository to your local machine.
-2. Run the application by executing the main script (`Main.py`).
+2. Run the application by executing the main script (`Main.pyw`).
 3. Follow the on-screen instructions to select quizzes and answer questions.
 4. Review your answers and explanations at the end of each chapter.
 

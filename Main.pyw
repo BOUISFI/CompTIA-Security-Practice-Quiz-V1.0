@@ -591,15 +591,6 @@ def generate_exam():
     # Start the exam GUI with the generated questions and exam_duration
     open_quiz_gui(exam_questions, "Full Exam")
 
-    # Initialize a variable to keep track of the current question number
-    current_question_num = 0
-
-    # Function to update the question number label
-    def update_question_number():
-        nonlocal current_question_num
-        current_question_num += 1
-        question_number_label.config(text=f"Question {current_question_num + 1}")
-
 #Jason load
 def load_and_start_quiz(filename, chapter_name):
     with open(filename, 'r') as json_file:
