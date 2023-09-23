@@ -1,6 +1,6 @@
 import os
 import tkinter as tk
-from tkinter import IntVar, font
+from tkinter import IntVar, font, ttk
 import json
 from PIL import Image, ImageTk
 import threading
@@ -9,7 +9,8 @@ import tkinter.messagebox as messagebox
 from pygame import mixer
 import random
 import threading
-from PIL import Image, ImageFilter, ImageGrab
+from PIL import Image
+
 
 # Global variable to keep track of the current track index
 current_track_index = 0
@@ -27,6 +28,7 @@ chapter_numbers = {
     "Chapter 3: Implementation": 3,
     "Chapter 4: Operations and incident Response": 4,
     "Chapter 5: Governance, Risk, and Compliance": 5,
+    "Generate Full Exam": 6,
 }
 
 class ChapterQuizGUI:
@@ -40,6 +42,12 @@ class ChapterQuizGUI:
         self.score = 0
         self.correctly_answered = [False] * len(chapter_data)  # List to track correct answers
         self.image_window = None  # Initialize the image window attribute as None
+
+        #Exit Bind
+        self.master.protocol("WM_DELETE_WINDOW", self.on_closing) 
+
+        #Review gui fix
+        self.radio_vars = [tk.IntVar() for _ in range(len(self.chapter_data))]
 
         self.master.configure(bg="white")  # Set the background of the quiz window to white
 
@@ -139,6 +147,12 @@ class ChapterQuizGUI:
         #Always at the end !
         self.show_question()
 
+    #Closing fonction
+    def on_closing(self):
+        if messagebox.askokcancel("Quit", "Do you want to quit the quiz? Your progress will be lost."):
+            self.master.destroy()
+            root.deiconify()
+    
     #Music functions
     def toggle_music(self):
         if self.music_paused:
@@ -200,11 +214,19 @@ class ChapterQuizGUI:
             self.correct_option = question_data["correct_option"]
             self.question_label.config(image=None)
 
+            # Calculate the question number (increment by 1)
+            question_number = self.current_question + 1
+
+            # Display the question number along with the question text
+            self.question_label.config(text=f"Question {question_number}: {question}")
+
             #Choices
             self.question_label.config(text=question)
             for i, option_text in enumerate(options):
-                self.radio_buttons[i].config(text=option_text)
-            self.radio_var.set(-1)
+                self.radio_buttons[i].config(text=option_text, variable=self.radio_vars[self.current_question])
+
+            # Reset the selected radio button to no selection (-1)
+            self.radio_vars[self.current_question].set(-1)
 
             #submit button
             self.submit_button.config(state=tk.NORMAL)
@@ -310,47 +332,68 @@ class ChapterQuizGUI:
         review_window = tk.Toplevel(self.master)
         review_window.title("Review Answers")
 
-        review_text = ""
-        has_incorrect_answers = False  # Flag to track if there are incorrect answers
+        # Create a notebook (tabs) to display questions in groups of 5
+        notebook = ttk.Notebook(review_window)
+        notebook.pack(padx=10, pady=10)
 
-        for i, (question_data, correctly_answered) in enumerate(zip(self.chapter_data, self.correctly_answered)):
-            if not correctly_answered:
-                has_incorrect_answers = True
+        # Group questions into sets of 5 for each tab
+        question_sets = [self.chapter_data[i:i+5] for i in range(0, len(self.chapter_data), 5)]
+
+        for set_num, question_set in enumerate(question_sets):
+            frame = ttk.Frame(notebook)
+            frame.pack(fill="both", expand=True)
+
+            # Display questions in the current set
+            for i, (question_data, correctly_answered) in enumerate(zip(question_set, self.correctly_answered[set_num*5:(set_num+1)*5])):
                 question = question_data["question"]
                 options = question_data["options"]
                 correct_option = question_data["correct_option"]  # Index of the correct option
-                selected_option = self.radio_var.get()  # Use self.radio_vars[i].get() instead
+                selected_option = self.radio_vars[set_num*5 + i].get()  # Use self.radio_vars[i].get() to get the selected option
 
-                if selected_option != correct_option:
-                    review_text += f"Question {i+1}: {question}\n"
-                    review_text += f"Your Answer: {options[selected_option] if selected_option >= 0 else 'Not answered'}\n"
-                    review_text += f"Correct Answer: {options[correct_option]}\n\n"
+                review_text = f"Question {set_num*5 + i + 1}: {question}\n"
+                answer_text = "" 		
 
-        if not has_incorrect_answers:
+                if correctly_answered:
+                    if selected_option == correct_option:
+                        answer_text += f"Good Answer: {options[selected_option]} (Correct)\n"
+                else:
+                    answer_text += f"Your Answer: {options[selected_option]} (Incorrect)\n"
+                    answer_text += f"Right Answer: {options[correct_option]} (Correct)\n"
 
-            review_text = "Congratulations! You answered all questions correctly!"
+                review_label = tk.Label(frame, text=review_text, wraplength=1000, font=("Helvetica", 10))
+                review_label.pack(padx=20, pady=5)
 
-        review_label = tk.Label(review_window, text=review_text, wraplength=700, font=("Helvetica", 10))
-        review_label.pack(padx=20, pady=10)
+                answer_label = tk.Label(frame, text=answer_text, wraplength=1000, font=("Helvetica", 10))
+                answer_label.pack(padx=20, pady=2)
+
+		
+                # Color-coding based on correctness
+                if "Incorrect" in answer_text :
+                    answer_label.config(fg="red")
+                elif "Correct" in answer_text :    
+                    answer_label.config(fg="green")
+
+            # Add the frame as a tab in the notebook
+            notebook.add(frame, text=f"Questions {set_num*5 + 1}-{(set_num+1)*5}")
 
         # Calculate the screen width and height
         screen_width = self.master.winfo_screenwidth()
         screen_height = self.master.winfo_screenheight()
 
         # Calculate the x and y positions to center the window
-        x_position = ((screen_width - review_window.winfo_reqwidth()) // 2) - 250
-        y_position = (screen_height - review_window.winfo_reqheight()) // 2
+        x_position = ((screen_width - review_window.winfo_reqwidth()) // 2) - 430
+        y_position = ((screen_height - review_window.winfo_reqheight()) // 2)- 325
 
         # Set the window's geometry to be centered on the screen
         review_window.geometry(f"+{x_position}+{y_position}")
 
     #Check next previous & return functions
     def check_answer(self):
-        selected_option = self.radio_var.get()
+        selected_option = self.radio_vars[self.current_question].get()
         correct_option = self.chapter_data[self.current_question]["correct_option"]
         # Message box no select
         if selected_option == -1:
-            messagebox.showinfo("Error", "Please select an answer before submitting.")
+            messagebox.showinfo("Error", "Please select an answer before submitting.")  
             return
         
         if selected_option == correct_option:
@@ -362,8 +405,16 @@ class ChapterQuizGUI:
     
     # Open PDF explanation
     def open_explanation(self):
-        chapter_number = chapter_numbers[self.chapter_name]  # Get the corresponding chapter number
-        explanation_path = f"Chapter_{chapter_number}_Answer.pdf"
+        if self.chapter_name == "Generate Full Exam":
+            explanation_path = "Exp/Exam_Full.pdf"  # Use the combined explanation file for the full exam
+        else:
+            chapter_number = chapter_numbers.get(self.chapter_name, None)
+        if chapter_number is not None:
+            explanation_path = f"Chapter_{chapter_number}_Answer.pdf"
+        else:
+            messagebox.showinfo("Error", "Explanation not available for this chapter.")
+            return
+
         try:
             os.startfile(explanation_path)  # Use "open" instead of "startfile" on macOS
         except Exception as e:
@@ -490,9 +541,68 @@ def main_menu():
                                    bg="red", fg="white", padx=10, pady=5)
         chapter_button.pack(pady=10, anchor=tk.W)
 
+    # Add a button for generating the exam in the main menu
+    generate_exam_button = tk.Button(root, text="Generate Full Exam", command=generate_exam,
+                                 bg="blue", fg="white", padx=10, pady=5)
+    generate_exam_button.pack(pady=10, anchor=tk.W)    
+
     # Add name label
     name_label = tk.Label(root, text="Made by Tarik BOUISFI\n© 2023 All Rights Reserved.", font=("Helvetica", 8), bg="white", fg="black")
     name_label.pack(side=tk.BOTTOM, fill=tk.X, padx=10, pady=5, anchor=tk.S)
+
+# Define the function to generate the exam
+def generate_exam():
+    total_questions = 10  # Total number of questions in the exam
+    exam_duration = 6  # Exam duration in minutes
+
+    # Calculate the number of questions from each chapter based on chapter objectives percentage
+    questions_per_chapter = {}
+    total_objectives_percentage = sum(chapter_info["objectives_percentage"] for chapter_info in extracted_data.values())
+    
+    # Initialize a variable to keep track of the total questions included
+    total_questions_included = 0
+
+    for chapter, chapter_info in extracted_data.items():
+        objectives_percentage = chapter_info["objectives_percentage"]
+        # Calculate the number of questions for this chapter based on percentage
+        chapter_questions = round((objectives_percentage / total_objectives_percentage) * total_questions)
+        
+        # Ensure that the total questions do not exceed the desired total
+        if total_questions_included + chapter_questions > total_questions:
+            chapter_questions = total_questions - total_questions_included
+        
+        questions_per_chapter[chapter] = chapter_questions
+        total_questions_included += chapter_questions
+
+    # Create a list to store all exam questions
+    exam_questions = []
+
+    # Randomly select questions from each chapter based on the counts
+    for chapter, chapter_info in extracted_data.items():
+        chapter_questions = chapter_info["questions"]
+        with open(chapter_questions, 'r') as json_file:
+            chapter_data = json.load(json_file)
+        
+        random.shuffle(chapter_data)  # Shuffle the questions within the chapter
+        selected_questions = chapter_data[:questions_per_chapter[chapter]]
+        
+        exam_questions.extend(selected_questions)
+    
+    # Start the exam GUI with the generated questions and exam_duration
+    open_quiz_gui(exam_questions, "Full Exam")
+
+    # Initialize a variable to keep track of the current question number
+    current_question_num = 0
+
+    # Create a label to display the current question number
+    question_number_label = tk.Label(full_exam_gui, text=f"Question {current_question_num + 1}", font=("Helvetica", 14))
+    question_number_label.pack()
+
+    # Function to update the question number label
+    def update_question_number():
+        nonlocal current_question_num
+        current_question_num += 1
+        question_number_label.config(text=f"Question {current_question_num + 1}")
 
 #Jason load
 def load_and_start_quiz(filename, chapter_name):
@@ -524,20 +634,25 @@ if __name__ == "__main__":
     #Question Data
     extracted_data = {
         "Chapter 1: Threats, Attacks, and Vulnerabilities": {"questions": ".Json/chapter1.json",
-                                                              "explanation": "Exp/Chapter_1_Answer.pdf", 
+                                                              "explanation": "Exp/Chapter_1_Answer.pdf",
+                                                              "objectives_percentage": 25,  # Adjust the percentage as needed
                                                               },
         "Chapter 2: Architecture and Design": {"questions": ".Json/chapter2.json",
-                                                "explanation": "Exp/Chapter_2_Answer.pdf"
+                                                "explanation": "Exp/Chapter_2_Answer.pdf",
+                                                "objectives_percentage": 20,  # Adjust the percentage as needed
                                                 },
         "Chapter 3: Implementation": {"questions": ".Json/chapter3.json",
                                        "explanation": "Exp/Chapter_3_Answer.pdf",
+                                       "objectives_percentage": 25,  # Adjust the percentage as needed
                                        },
         "Chapter 4: Operations and incident Response": {"questions": ".Json/chapter4.json",
                                                          "explanation": "Exp/Chapter_4_Answer.pdf", 
+                                                         "objectives_percentage": 15,  # Adjust the percentage as needed
                                                         },
         "Chapter 5: Governance, Risk, and Compliance": {"questions": ".Json/chapter5.json",
                                                          "explanation": "Exp/Chapter_5_Answer.pdf",
-                                                        }
+                                                         "objectives_percentage": 15,  # Adjust the percentage as needed
+                                                        },
     }
 
     main_menu()

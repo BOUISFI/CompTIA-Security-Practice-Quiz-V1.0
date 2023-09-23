@@ -262,9 +262,9 @@
     {
         "question": "27. Which of the following is typically included in a BPA?",
         "options": [
-            "A. Clear statements detailing the expectation between a customer and a service provider",
-            "B. The agreement that a specific function or service will be delivered at the agreed-on level of performance",
-            "C. Sharing of profits and losses and the addition or removal of a partner",
+            "A. Clear statements detailing the expectation between\n a customer and a service provider",
+            "B. The agreement that a specific function or service\n will be delivered at the agreed-on level of performance",
+            "C. Sharing of profits and losses and the addition or\n removal of a partner",
             "D. Security requirements associated with interconnecting IT systems"
         ],
         "correct_option": 2
@@ -322,20 +322,20 @@
     {
         "question": "33. A security administrator is reviewing the company's continuity plan, and it specifies an RTO of four hours and an RPO of one day. Which of the following is the plan describing?",
         "options": [
-            "A. Systems should be restored within one day and should remain operational for at least four hours.",
-            "B. Systems should be restored within four hours and no later than one day after the incident.",
-            "C. Systems should be restored within one day and lose, at most, four hours' worth of data.",
-            "D. Systems should be restored within four hours with a loss of one day's worth of data at most."
+            "A. Systems should be restored within one day and\n should remain operational for at least four hours.",
+            "B. Systems should be restored within four hours and\n no later than one day after the incident.",
+            "C. Systems should be restored within one day and lose,\n at most, four hours' worth of data.",
+            "D. Systems should be restored within four hours with\n a loss of one day's worth of data at most."
         ],
         "correct_option": 3
     },
     {
         "question": "34. Which of the following statements is true regarding a data retention policy?",
         "options": [
-            "A. Regulations require financial transactions to be stored for seven years.",
-            "B. Employees must remove and lock up all sensitive and confidential documents when not in use.",
-            "C. It describes a formal process of managing configuration changes made to a network.",
-            "D. It is a legal document that describes a mutual agreement between parties."
+            "A. Regulations require financial transactions\n to be stored for seven years.",
+            "B. Employees must remove and lock up all sensitive\n and confidential documents when not in use.",
+            "C. It describes a formal process of managing configuration\n changes made to a network.",
+            "D. It is a legal document that describes a mutual\n agreement between parties."
         ],
         "correct_option": 0
     },
@@ -354,8 +354,8 @@
         "options": [
             "A. Information on how secure Windows 10 is in its default state",
             "B. A set of recommended security configurations to secure Windows 10",
-            "C. Performance benchmark tools for Windows 10 systems, including network speed and firewall throughput",
-            "D. Vulnerability scan data for Windows 10 systems provided by various manufacturers"
+            "C. Performance benchmark tools for Windows 10 systems,\n including network speed and firewall throughput",
+            "D. Vulnerability scan data for Windows 10 systems\n provided by various manufacturers"
         ],
         "correct_option": 1
     },
@@ -414,7 +414,7 @@
         "options": [
             "A. Quantitative risk analysis requires detailed financial data.",
             "B. Quantitative risk analysis is sometimes subjective.",
-            "C. Quantitative risk analysis requires expertise on systems and infrastructure.",
+            "C. Quantitative risk analysis requires expertise on systems\n and infrastructure.",
             "D. Quantitative risk provides clear answers to risk-based questions."
         ],
         "correct_option": 0
@@ -613,7 +613,7 @@
         "question": "62. What key difference separates pseudonymization and anonymization?",
         "options": [
             "A. Anonymization uses encryption.",
-            "B. Pseudonymization requires additional data to reidentify the data subject.",
+            "B. Pseudonymization requires additional data\n to reidentify the data subject.",
             "C. Anonymization can be reversed using a hash.",
             "D. Pseudonymization uses randomized tokens."
         ],
@@ -643,8 +643,8 @@
         "question": "65. Greg has data that is classified as health information that his organization uses as part of their company's HR data. Which of the following statements is true for his company's  security policy?",
         "options": [
             "A. The health information must be encrypted.",
-            "B. Greg should review relevant law to ensure the health information is handled properly.",
-            "C. Companics arc prohibitcd from storing hcalth information and must outsource to third parties.",
+            "B. Greg should review relevant law to ensure the health\n information is handled properly.",
+            "C. Companics arc prohibitcd from storing hcalth information\n and must outsource to third parties.",
             "D. All of the above"
         ],
         "correct_option": 1

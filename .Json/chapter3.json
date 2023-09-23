@@ -62,9 +62,9 @@
     {
         "question": "7. Denny wants to deploy antivirus for his organization and wants to ensure that it will stop the most malware. What deployment model should Denny select?",
         "options": [
-            "A. Install antivirus from the same vendor on individual PCs and servers to best balance visibility, support, and security.",
+            "A. Install antivirus from the same vendor on individual PCs and servers\n to best balance visibility, support, and security.",
             "B. Install antivirus from more than one vendor on all PCs and servers to maximize coverage.",
-            "C. Install antivirus from one vendor on PCs and from another vendor on the server to provide a greater chance of catching malware.",
+            "C. Install antivirus from one vendor on PCs and from another vendor on the server\n to provide a greater chance of catching malware.",
             "D. Install antivirus only on workstations to avoid potential issues with server performance."
         ],
         "correct_option": 2
@@ -162,10 +162,10 @@
     {
         "question": "17. What occurs when a certificate is stapled?",
         "options": [
-            "A. Both the certificate and OCSP responder are sent together to prevent additional retrievals during certificate path validation.",
-            "B. The certificate is stored in a secured location that prevents the certificate from being easily removed or modified.",
-            "C. Both the host certificate and the root certificate authority's private key are attached to validate the authenticity of the chain.",
-            "D. Thc ccrtificatc is attachcd to othcr ccrtificatcs to dcmonstratc thc cntirc ccrtificatc chain."
+            "A. Both the certificate and OCSP responder are sent together\n to prevent additional retrievals during certificate path validation.",
+            "B. The certificate is stored in a secured location\n that prevents the certificate from being easily removed or modified.",
+            "C. Both the host certificate and the root certificate authority's private key\n are attached to validate the authenticity of the chain.",
+            "D. The certificate is attachcd to other certificates to demonstrate\n the entire certificate chain."
         ],
         "correct_option": 0
     },
@@ -195,7 +195,7 @@
             "A. AH does not provide confidentiality.",
             "B. AH does not provide data integrity.",
             "C. AH does not provide replay protection.",
-            "D. None of the above; AH provides confidentiality, authentication, and replay protection."
+            "D. None of the above; AH provides confidentiality,\n authentication, and replay protection."
         ],
         "correct_option": 0
     },
@@ -295,7 +295,7 @@
             "A. Only certificates and chain certificates, not private keys",
             "B. Only a private key",
             "C. A server certificate, intermediate certificates, and the private key",
-            "D. None of the above, because PFX files are used for certificate requests only"
+            "D. None of the above, because PFX files are used\n for certificate requests only"
         ],
         "correct_option": 2
     },
@@ -406,7 +406,7 @@
             "A. Require that they present their Social Security number.",
             "B. Require them to use a federated identity via Google.",
             "C. Require them to use knowledge-based authentication.",
-            "D. Require them to validate an email sent to the account they signed up with."
+            "D. Require them to validate an email sent to the account\n they signed up with."
         ],
         "correct_option": 2
     },
@@ -565,9 +565,9 @@
         "question": "57. Melissa's website provides users who access it via HTTPS with a Transport Layer Security (TLS) connection. Unfortunately, Melissa forgot to renew her certificate, and it is presenting users with an error. What happens to the HTTPS connection when a certificate expires?",
         "options": [
             "A. All traffic will be unencrypted.",
-            "B. Traffic for users who do not click OK at the certificate error will be unencrypted.",
+            "B. Traffic for users who do not click OK at the certificate error\n will be unencrypted.",
             "C. Trust will be reduced, but traffic will still be encrypted.",
-            "D. Users will be redirected to the certificate authority's site for a warning until the certifi- cate is renewed."
+            "D. Users will be redirected to the certificate authority's site\n for a warning until the certificate is renewed."
         ],
         "correct_option": 2
     },
@@ -727,7 +727,7 @@
             "A. It is used for a storage area network.",
             "B. It is provided by SANS, a network security organization.",
             "C. The certificate is part of a self-signed, self-assigned namespace.",
-            "D. The certificate allows multiple hostnames to be protected by the same certificate."
+            "D. The certificate allows multiple hostnames \nto be protected by the same certificate."
         ],
         "correct_option": 3
     },
@@ -746,8 +746,8 @@
         "options": [
             "A. Implement automatic patching.",
             "B. Implement a policy that has individual users patch their systems.",
-            "C. Delegate patch management to managers of departments so that they can find the best patch management for their departments.",
-            "D. Immediately deploy patches to a test environment; then as soon as testing is complete, have a staged rollout to the production network."
+            "C. Delegate patch management to managers of departments so that\n they can find the best patch management for their departments.",
+            "D. Immediately deploy patches to a test environment; then as soon as\n testing is complete, have a staged rollout to the production network."
         ],
         "correct_option": 3
     },
@@ -834,9 +834,9 @@
     {
         "question": "84. Dan configures a resource-based policy in his Amazon account. What control has he deployed?",
         "options": [
-            "A. A control that determines who has access to the resource, and the actions they can take on it",
-            "B. A control that determines the amount that service can cost before an alarm is sent",
-            "C. A control that determines the amount of a finite resource that can be consumed before an alarm is set",
+            "A. A control that determines who has access to the resource,\n and the actions they can take on it",
+            "B. A control that determines the amount that service can cost\n before an alarm is sent",
+            "C. A control that determines the amount of a finite resource\n that can be consumed before an alarm is set",
             "D. A control that determines what an identity can do"
         ],
         "correct_option": 0
@@ -884,9 +884,9 @@
     {
         "question": "89. Samantha has been asked to provide a recommendation for her organization about password security practices. Users have complained that they have to remember too many passwords as part of their job and that they need a way to keep track of them. What should Samantha recommend?",
         "options": [
-            "A. Recommend that users write passwords down near their workstation.",
-            "B. Recommend that users use the same password for sites with similar data or risk profiles.",
-            "C. Recommend that users change their standard passwords slightly based on the site they are using.",
+            "A. Recommend that users write passwords down near\n their workstation.",
+            "B. Recommend that users use the same password for sites\n with similar data or risk profiles.",
+            "C. Recommend that users change their standard passwords\n slightly based on the site they are using.",
             "D. Recommend a password vault or manager application."
         ],
         "correct_option": 3
@@ -895,7 +895,7 @@
         "question": "90. Matt has enabled port security on the network switches in his building. What docs port security do?",
         "options": [
             "A. Filters by MAC address",
-            "B. Prevents routing protocol updates from being sent from protected ports",
+            "B. Prevents routing protocol updates from being sent\n from protected ports",
             "C. Establishcs privatc VLANs",
             "D. Prevents duplicate MAC addresses from connecting to the network"
         ],
@@ -1224,10 +1224,10 @@
     {
         "question": "123. Derek is in charge of his organization's certificate authorities and wants to add a new certificate authority. His organization already has three certificate authorities operating in a mesh: A. South American CA, B. the United States CA, and C, the European Union CA. As they expand into Australia, he wants to add D. the Australian CA. Which CAs will Derek need to issue certificates to from D. to ensure that systems in the Australian domain are able to access servers in A, B, and C's domains?",
         "options": [
-            "A. He needs all the other systems to issue D certificates so that his systems will be trusted there.",
-            "B. He needs to issue certificates from D to each of the other CAs systems and then have the other CAs issue D a certificate.",
+            "A. He needs all the other systems to issue D certificates\n so that his systems will be trusted there.",
+            "B. He needs to issue certificates from D to each of the other\n CAs systems and then have the other CAs issue D a certificate.",
             "C. He needs to provide the private key from D to each of the other CAs.",
-            "D. He needs to receive the private key from each of the other CAs and use it to sign the root certificate for D."
+            "D. He needs to receive the private key from each of the other CAs\n and use it to sign the root certificate for D."
         ],
         "correct_option": 1
     },
@@ -1324,10 +1324,10 @@
     {
         "question": "133. Christina wants to ensure that session persistence is maintained by her load balancer. What is she attempting to do?",
         "options": [
-            "A. Ensure that all of a client's requests go to the same server for the duration of a given session or transaction.",
-            "B. Assign the same internal IP address to clients whenever they connect through the load balancer.",
-            "C. Ensure that all transactions go to the current server in a round-robin during the time it is the primary server.",
-            "D. Assign the same external IP address to all servers whenever they are the primary server assigned by the load balancer."
+            "A. Ensure that all of a client's requests go to the same server\n for the duration of a given session or transaction.",
+            "B. Assign the same internal IP address to clients\n whenever they connect through the load balancer.",
+            "C. Ensure that all transactions go to the current server\n in a round-robin during the time it is the primary server.",
+            "D. Assign the same external IP address to all servers \nwhenever they are the primary server assigned by the load balancer."
         ],
         "correct_option": 0
     },
@@ -1375,10 +1375,10 @@
     {
         "question": "138. Marek has configured systems in his network to perform boot attestation. What has he con- figured the systems to do?",
         "options": [
-            "A. To run only trusted software based on previously stored hashes using a chained boot process",
+            "A. To run only trusted software based on previously\n stored hashes using a chained boot process",
             "B. To notify a BO OTP server when the system has booted up",
-            "C. To hash the BIOS of the system to ensure that the boot process has occurred securely",
-            "D. To notify a remote system or management tool that the boot process was secure using mcasurcmcnts from thc boot proccss"
+            "C. To hash the BIOS of the system to ensure that the boot\n process has occurred securely",
+            "D. To notify a remote system or management tool that the boot process\n was secure using mcasurcmcnts from thc boot proccss"
         ],
         "correct_option": 3
     },
@@ -1405,7 +1405,7 @@
     {
         "question": "141. Lois is dcsigning thc physical layout for hcr wirclcss acccss point (WAP) placcmcnt in hcr organization. Which of the following items is not a common concern when designing a WAP layout?",
         "options": [
-            "A. Determining construction material of the walls around the access points",
+            "A. Determining construction material of the walls\n around the access points",
             "B. Assessing power levels from other access points",
             "C. Performing a site survey",
             "D. Maximizing coverage overlap"
@@ -1717,9 +1717,9 @@
         "question": "172. What does UEFI measured boot do?",
         "options": [
             "A. Records how long it takes for a system to boot up",
-            "B. Records information about each component that is loaded, stores it in the TPM, and can report it to a server",
-            "C. Compares the hash of every component that is loaded against a known hash stored in the TPM",
-            "D. Checks for updated versions of the UEFI, and compares it to the current version; if it is measured as being too far out of date, it updates the UEFI"
+            "B. Records information about each component that is loaded,\n stores it in the TPM, and can report it to a server",
+            "C. Compares the hash of every component that is loaded against\n a known hash stored in the TPM",
+            "D. Checks for updated versions of the UEFI, and compares it\n to the current version; if it is measured as being too far out of date, it updates the UEFI"
         ],
         "correct_option": 1
     },
@@ -1826,9 +1826,9 @@
     {
         "question": "183. Theresa implements a network-based IDS. What can she do to traffic that passes through the IDS?",
         "options": [
-            "A. Review the traffic based on rules and detect and alert about unwanted or undesirable traffic.",
-            "B. Review the traffic based on rules and detect and stop traffic based on those rules.",
-            "C. Detect sensitive data being sent to the outside world and encrypt it as it passes through the IDS.",
+            "A. Review the traffic based on rules and detect and alert\n about unwanted or undesirable traffic.",
+            "B. Review the traffic based on rules and detect and stop\n traffic based on those rules.",
+            "C. Detect sensitive data being sent to the outside world and encrypt\n it as it passes through the IDS.",
             "D. All of the above"
         ],
         "correct_option": 0
@@ -1839,17 +1839,17 @@
             "A. The sccurity of the  container host",
             "B. Securing the management stack for the container",
             "C. Insider threats",
-            "D. Monitoring network traffic to and from the containers for threats and attacks"
+            "D. Monitoring network traffic to and from the containers\n for threats and attacks"
         ],
         "correct_option": 2
     },
     {
         "question": "185. Gary's organization uses a NAT gateway at its network edge. What security benefit does a NAT gateway provide?",
         "options": [
-            "A. It statefully blocks traffic based on port and protocol as a type of firewall.",
+            "A. It statefully blocks traffic based on port and protocol\n as a type of firewall.",
             "B. It can detect malicious traffic and stop it from passing through.",
-            "C. It allows systems to connect to another network without being directly exposed to it.",
-            "D. It allows non-IP-based addresses to be used behind a legitimate IP address."
+            "C. It allows systems to connect to another network without\n being directly exposed to it.",
+            "D. It allows non-IP-based addresses to be used behind\n a legitimate IP address."
         ],
         "correct_option": 2
     },
@@ -1918,9 +1918,9 @@
         "question": "192. Mike's manager has asked him to verify that the certificate chain for their production website is valid. What has she asked Mike to validate?",
         "options": [
             "A. That the certificate has not been revoked",
-            "B. That users who visit the website can verify that the site and the CAs in the chain are all trustworthy",
-            "C. That the encryption used to create the certificate is strong and has not been cracked",
-            "D. That the certificate was issued properly and that prior certificates issued for the same system have also been issued properly"
+            "B. That users who visit the website can verify that\n the site and the CAs in the chain are all trustworthy",
+            "C. That the encryption used to create the certificate is strong\n and has not been cracked",
+            "D. That the certificate was issued properly and that prior certificates\n issued for the same system have also been issued properly"
         ],
         "correct_option": 1
     },
@@ -2107,10 +2107,10 @@
     {
         "question": "211. Charles is concerned that users of Android devices in his company are delaying OTA updates. Why would Charles be concerned about this, and what should he do about it?",
         "options": [
-            "A. OTA updates patch applications, and a NAC agent would report on all phones in the organization",
-            "B. OTA updates update device encryption keys and are necessary for security, and a PKI would track encryption certificates and keys",
-            "C. OTA updates patch firmware and updates phone configurations, and an MDM tool would provide reports on firmware versions and phone settings",
-            "D. OTA updates are sent by phones to report on online activity and tracking, and an MDM tool receives OTA updates to monitor phones"
+            "A. OTA updates patch applications, and a NAC agent would report\n on all phones in the organization",
+            "B. OTA updates update device encryption keys and are necessary for security,\n and a PKI would track encryption certificates and keys",
+            "C. OTA updates patch firmware and updates phone configurations,\n and an MDM tool would provide reports on firmware versions and phone settings",
+            "D. OTA updates are sent by phones to report on online activity and tracking,\n and an MDM tool receives OTA updates to monitor phones"
         ],
         "correct_option": 2
     },
@@ -2167,7 +2167,7 @@
     {
         "question": "217. Olivia wants to enforce a wide variety of settings for devices used in her organization. Which of the following methods should she select if she needs to manage hundreds of devices while setting rules for use of SMS and MMS, audio and video recording, GPS tagging, and wireless connection methods like tethering and hotspot modes?",
         "options": [
-            "A. Use baseline settings automatically set for every phone before it is deployed using an imaging tool.",
+            "A. Use baseline settings automatically set for every phone\n before it is deployed using an imaging tool.",
             "B. Require users to configure their phones using a lockdown guide.",
             "C. Use a UEM tool and application to manage the devices.",
             "D. Use a CASB tool to manage the devices."
@@ -2227,9 +2227,9 @@
     {
         "question": "223. Michelle's organization uses self-signed certificates throughout its internal infrastructure. After a compromise, Michelle needs to revoke one of the self-signed certificates. How can she do that?",
         "options": [
-            "A. Contact the certificate authority and request that they revoke the certificate.",
+            "A. Contact the certificate authority and request\n that they revoke the certificate.",
             "B. Add the certificate to the CRL.",
-            "C. Remove the certificate from the list of whitelisted certificates from each machine that trusts it.",
+            "C. Remove the certificate from the list of whitelisted certificates\n from each machine that trusts it.",
             "D. Reissue the certificate, causing the old version to be invalidated."
         ],
         "correct_option": 2
@@ -2239,7 +2239,7 @@
         "options": [
             "A. Changing the DNS TXT record",
             "B. Responding to an email sent to a contact in the domain's WHOIS information",
-            "C. Publishing a nonce provided by the certificate authority as part of the domain information",
+            "C. Publishing a nonce provided by the certificate authority\n as part of the domain information",
             "D. Changing the IP addresses associated with the domain"
         ],
         "correct_option": 3

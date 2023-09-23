@@ -64,8 +64,8 @@
         "options": [
             "A. The scans will show the programs the attackers used.",
             "B. The scans will show the versions of software installed before the attack.",
-            "C. Vulnerable services will provide clues about what the attackers may have targeted.",
-            "D. The scans will show where firewalls and other network devices were in place to help with incident analysis."
+            "C. Vulnerable services will provide clues about what\n the attackers may have targeted.",
+            "D. The scans will show where firewalls and other network devices\n were in place to help with incident analysis."
         ],
         "correct_option": 2
     },
@@ -114,8 +114,8 @@
         "question": "12. Ted needs to preserve a server for forensic purposes. Which of the following should he not do?",
         "options": [
             "A. Turn the system off to ensure that data does not change.",
-            "B. Remove the drive while the system is running to ensure that data does not change.",
-            "C. Leave the machine connected to the network so that users can continue to use it.",
+            "B. Remove the drive while the system is running\n to ensure that data does not change.",
+            "C. Leave the machine connected to the network\n so that users can continue to use it.",
             "D. All of the above"
         ],
         "correct_option": 3
@@ -183,7 +183,7 @@
     {
         "question": "19. While Susan is conducting a forensic review of logs from two servers hosted in the same data-center, she notices that log items on the first server occurred exactly an hour before matching events on the second server. What is the most likely cause of such exact occurrences?",
         "options": [
-            "A. The attack took u n hour to complete, providing the attacker with access to rhe second machine an hour later.",
+            "A. The attack took u n hour to complete, providing the attacker\n with access to rhe second machine an hour later.",
             "B. The log entries are incorrect, causing the events to appear at the wrong time.",
             "C. The attacker used a script causing events to happen exactly an hour apart.",
             "D. A time offset is causing the events to appear to occur at different times."
@@ -195,7 +195,7 @@
         "options": [
             "A. DNS data is used to capture network scans.",
             "B. DNS data can be used to identify domain transfer attacks.",
-            "C. DNS log information can be used to identify malware going to known malicious sites.",
+            "C. DNS log information can be used to identify malware going\n to known malicious sites.",
             "D. DNS log inforiiiation can be used to identify unauthorized logins."
         ],
         "correct_option": 2
@@ -285,7 +285,7 @@
         "question": "29. Rick runs the following command: cat file1.txt file2.txt, What will occur?",
         "options": [
             "A. The contents of file1.txt will be appended to file2.txt.",
-            "B. The contents of file1.txt will be displayed, and then the contents of file2 will be displayed.",
+            "B. The contents of file1.txt will be displayed,\n and then the contents of file2 will be displayed.",
             "C. The contents of file2.txt will be appended to file1.txt.",
             "D. The contents of both files will be combined line by line."
         ],
@@ -345,7 +345,7 @@
         "question": "35. Jason is conducting a forensic investigation and has retrieved artifacts in addition to drives and files. What should he do to document the artifacts he has acquired?",
         "options": [
             "A. Image them using dd and ensure that a valid MD5sum is generated.",
-            "B. Take a picture of them, label them, and add them to the chain of custody documentation.",
+            "B. Take a picture of them, label them,\n and add them to the chain of custody documentation.",
             "C. Contact law enforcement to properly handle the artifacts.",
             "D. Engage legal counsel to advise him how to handle artifacts in an investigation."
         ],
@@ -535,10 +535,10 @@
     {
         "question": "54. Greg runs the following command (click >Show image<). What occurs?",
         "options": [
-            "A. All of the files in (/home/greg/) are set to allow the group to read, write, and execute  them, and Greg and the world can only read them.",
-            "B. The read, write, and execute permissions will be removed from all files in the (/home/greg/files) directory.",
-            "C. All of the files in (/home/greg/files) are set to allow Greg to read, write, and execute them, and the group and the world can only read them.",
-            "D. A new directory will be created with read, write, and execute permissions for the world and read-only permissions for Greg and the group he is in."
+            "A. All of the files in (/home/greg/) are set to allow the group to read,\n write, and execute  them, and Greg and the world can only read them.",
+            "B. The read, write, and execute permissions will be removed\n from all files in the (/home/greg/files) directory.",
+            "C. All of the files in (/home/greg/files) are set to allow Greg to read,\n write, and execute them, and the group and the world can only read them.",
+            "D. A new directory will be created with read, write, and execute permissions\n for the world and read-only permissions for Greg and the group he is in."
         ],
         "correct_option": 2,
         "image_filename":"images/chapter4/54.png"
@@ -579,7 +579,7 @@
             "A. As a snapshot using the VMware built-in tools",
             "B. By using dd to an external drive",
             "C. By using dd to an internal drive",
-            "D. By using a forensic imaging device after removing the server's drives"
+            "D. By using a forensic imaging device\n after removing the server's drives"
         ],
         "correct_option": 0
     },
@@ -597,7 +597,7 @@
         "question": "60. What role do digital forensics most often play in counterintelligence efforts?",
         "options": [
             "A. They are used to determine what information was stolen by spies.",
-            "B. They are used to analyze tools and techniques used by intelligence agencies.",
+            "B. They are used to analyze tools and techniques used\n by intelligence agencies.",
             "C. They are required for training purposes for intelligence agents.",
             "D. They do not play a role in counterintelligence."
         ],
@@ -779,7 +779,7 @@
             "A. Run the Linux cmp command to compare the two files.",
             "B. Calculate an AES-256 hash of the two drives.",
             "C. Compare an MD5 or SHA-1 hash of the drive to the image.",
-            "D. Compare the MD5 of each file on the drive to the MDS of each file in the image."
+            "D. Compare the MD5 of each file on the drive\n to the MDS of each file in the image."
         ],
         "correct_option": 2
     },
@@ -798,7 +798,7 @@
         "options": [
             "A. Removing potentially infected or compromised systems from the network",
             "B. Using firewalls and other tools to limit the spread of an active infection",
-            "C. Partitioning the network into segments based on user and system roles and security requirements",
+            "C. Partitioning the network into segments based\n on user and system roles and security requirements",
             "D. Adding security systems or devices to prevent data loss and exposure'"
         ],
         "correct_option": 2
@@ -846,7 +846,7 @@
     {
         "question": "85. Alaina's company is considering signing a contract with a cloud service provider, and wants to determine how secure their services are. Which of the following is a method she is likely to be able to use to assess it?",
         "options": [
-            "A. Ask for permission to vulnerability scan the vendor's production service.",
+            "A. Ask for permission to vulnerability scan the vendor's\n production service.",
             "B. Conduct an audit of the organization.",
             "C. Review an existing SOC audit.",
             "D. Hire a third party to audit the organization."
@@ -876,10 +876,10 @@
     {
         "question": "88. Cynthia has been asked to build a playbook for the SOAR system that her organization uses. What will she build?",
         "options": [
-            "A. A set of rules with actions that will be performed when an event occurs using data collected or provided to the SOAR system",
-            "B. An automated incident response process that will be run to support the incident response (IR) team",
+            "A. A set of rules with actions that will be performed when an event occurs\n using data collected or provided to the SOAR system",
+            "B. An automated incident response process that will be run to support\n the incident response (IR) team",
             "C. A trend analysis-driven script that will provide instructions to the IR team",
-            "D. A set of actions that the team will perform to use the SOAR to respond to an incident"
+            "D. A set of actions that the team will perform to use the SOAR\n to respond to an incident"
         ],
         "correct_option": 0
     },

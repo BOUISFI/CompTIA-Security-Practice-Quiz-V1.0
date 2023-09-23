@@ -44,8 +44,8 @@
         "options": [
             "A. The power supply for the building cannot handle all the devices starting at once.",
             "B. The organization wants to ensure that a second outage does not occur due to failed systems.",
-            "C. The organization wants to ensure that systems are secure and have the resources they need by following a restoration order.",
-            "D. The fire suppression system may activate due to the sudden change in heat, causing significant damage to the systems."
+            "C. The organization wants to ensure that systems are secure\n and have the resources they need by following a restoration order.",
+            "D. The fire suppression system may activate due to the sudden change in heat,\n causing significant damage to the systems."
         ],
         "correct_option": 2
     },
@@ -92,10 +92,10 @@
     {
         "question": "10. Olivia wants to ensure that the code executed as part of her application is secure from tampering and that the application itself cannot be tampered with. Which of the following solutions should she use and why?",
         "options": [
-            "A. Server-side execution and validation, because it prevents data and application tampering",
-            "B. Client-side validation and server-side execution to ensure client data access",
-            "C. Server-side validation and client-side execution to prevent data tampering",
-            "D. Client-side execution and validation, because it prevents data and application tampering"
+            "A. Server-side execution and validation,\n because it prevents data and application tampering",
+            "B. Client-side validation and server-side\n execution to ensure client data access",
+            "C. Server-side validation and client-side\n execution to prevent data tampering",
+            "D. Client-side execution and validation,\n because it prevents data and application tampering"
         ],
         "correct_option": 0
     },
@@ -263,7 +263,7 @@
         "question": "27. Which of the following items is not included in a blockchain's public ledger?",
         "options": [
             "A. A record of all genuine transactions between network participants",
-            "B. A record of cryptocurrency balances (or other data) stored in the blockchain",
+            "B. A record of cryptocurrency balances (or other data)\n stored in the blockchain",
             "C. The identity of the blockchain participants",
             "D. A token that identifies the authority under which the transaction was made"
         ],
@@ -402,7 +402,7 @@
     {
         "question": "41. Why is heating, ventilation, and air-conditioning (HVAC) part of organizational security planning?",
         "options": [
-            "A. Attackers often use HVAC systems as part of social engineering exercises.",
+            "A. Attackers often use HVAC systems\n as part of social engineering exercises.",
             "B. HVAC systems are important for availability.",
             "C. HVAC systems are a primary line of network defense.",
             "D. None of the above"
@@ -444,15 +444,15 @@
         "options": [
             "A. It allows him to determine how much disk space can be used.",
             "B. It allows him to determine how much bandwidth can be used.",
-            "C. It allows him to specify who has access to resources and what actions they can perform on it.",
-            "D. It allows him to specify what actions a resource can take on specific users."
+            "C. It allows him to specify who has access\n to resources and what actions they can perform on it.",
+            "D. It allows him to specify what actions\n  a resource can take on specific users."
         ],
         "correct_option": 2
     },
     {
         "question": "46. Chris sets up SAN replication for his organization. What has he done?",
         "options": [
-            "A. He has enabled RAID 1 to ensure that the SAN cannot lose data if a drive fails because the drives are replicated.",
+            "A. He has enabled RAID 1 to ensure that the SAN \n cannot lose data if a drive fails because the drives are replicated.",
             "B. He has set up backups to a tape library for the SAN to ensure data resilience.",
             "C. He has built a second identical set of hardware for his SAN.",
             "D. He has replicated the data on one SAN to another at the block or hardware level."
@@ -574,17 +574,17 @@
         "options": [
             "A. On the client, using a proxy",
             "B. On the server, using a protocol analyzer",
-            "C. At the certificate authority, by validating a request for a TLS certificate",
-            "D. Between the client and server by intercepting encrypted communications"
+            "C. At the certificate authority,\n by validating a request for a TLS certificate",
+            "D. Between the client and server \n by intercepting encrypted communications"
         ],
         "correct_option": 3
     },
     {
         "question": "59. Diana wants to prevent drones from flying over her organization's property. What can she do?",
         "options": [
-            "A. Deploy automated drone take-down systems that will shoot the drones down.",
-            "B. Deploy radio frequency jamming systems to disrupt the drone's control frequencies.",
-            "C. Contact the FAA ro get her company's property listed us n no-fly zone.",
+            "A. Deploy automated drone take-down systems\n that will shoot the drones down.",
+            "B. Deploy radio frequency jamming systems\n to disrupt the drone's control frequencies.",
+            "C. Contact the FAA ro get her company's\n property listed us n no-fly zone.",
             "D. None of the above"
         ],
         "correct_option": 3
@@ -612,7 +612,7 @@
     {
         "question": "62. Joanna's company has adopted multiple software-as-a-service (SaaS) tools and now wants to better coordinate them so that the data that they each contain can be used in multiple services.",
         "options": [
-            "A. Replace the SaaS service with a platform-as-a-service (PaaS) environment to move everything to a single platform.",
+            "A. Replace the SaaS service with a platform-as-a-service (PaaS)\n environment to move everything to a single platform.",
             "B. Build API-based integrations using in-house expertise.",
             "C. Adopt an integration platform to leverage scalability.",
             "D. Build flat-file integrations using in-house expertise."
@@ -795,7 +795,7 @@
             "A. The image is used as decryption key.",
             "B. The code is hidden in the image using steganography.",
             "C. The code is encoded as text in the image.",
-            "D. The image is a control command from a malware command and control network."
+            "D. The image is a control command from\n a malware command and control network."
         ],
         "correct_option": 1
     },
@@ -872,10 +872,10 @@
     {
         "question": "88. Allan is considering implementing off-site storage. When he does, his datacenter manager offers four solutions. Which of these solutions will best ensure resilience and why?",
         "options": [
-            "A. Back up to a second datacenter in another building nearby, allowing reduced latency for backups.",
-            "B. Back up to an off-site location at least 90 miles away to ensure that a natural disaster does not destroy both copies.",
-            "C. Back up to a second datacenter in another building nearby to ensure that the data will be accessible if the power fails to the primary building.",
-            "D. Back up to an off-site location at least 10 miles away to balance latency and resilience due to natural disaster."
+            "A. Back up to a second datacenter in another building nearby,\n allowing reduced latency for backups.",
+            "B. Back up to an off-site location at least 90 miles away\n to ensure that a natural disaster does not destroy both copies.",
+            "C. Back up to a second datacenter in another building nearby\n to ensure that the data will be accessible if the power fails to the primary building.",
+            "D. Back up to an off-site location at least 10 miles away\n to balance latency and resilience due to natural disaster."
         ],
         "correct_option": 1
     },
@@ -1065,8 +1065,8 @@
         "options": [
             "A. Code that is in a DLL, rather than the executable",
             "B. Server-side code that is called from a client",
-            "C. SQL statements compiled on the database server as a single procedure that can be called",
-            "D. Procedures that are kept on a separate server from the calling application, such as in middleware"
+            "C. SQL statements compiled on the database\n server as a single procedure that can be called",
+            "D. Procedures that are kept on a separate\n server from the calling application, such as in middleware"
         ],
         "correct_option": 2
     },
@@ -1153,10 +1153,10 @@
     {
         "question": "116. Which of the following is not a common challenge with smartcard-based authentication systems?",
         "options": [
-            "A. Weak security due to the limitations of the smartcard's encryption support",
-            "B. Added expense due to card readers, distribution, and software installation",
-            "C. Wea ker user experience due ro rhe requirement to insert the card fr r every authentication",
-            "D. Lack of security due to possession of the card being the only factor used"
+            "A. Weak security due to the limitations\n of the smartcard's encryption support",
+            "B. Added expense due to card readers,\n distribution, and software installation",
+            "C. Weaker user experience due ro rhe requirement\n to insert the card for every authentication",
+            "D. Lack of security due to possession of\n the card being the only factor used"
         ],
         "correct_option": 0
     },
@@ -1313,10 +1313,10 @@
     {
         "question": "132. Mike is concerned about data sovereignty for data that his organization captures and main- tains. What best describes his concern?",
         "options": [
-            "A. Who owns the data that is captured on systems hosted in a cloud provider's infra- structure?",
-            "B. Can Mike's organization make decisions about data that is part of its service, or does it belong to users?",
-            "C. Is the data located in a country subject to the laws of the country where it is stored?",
-            "D. Does data have rights on its own, or does the owner of the data determine what rights may apply to it?"
+            "A. Who owns the data that is captured on systems\n hosted in a cloud provider's infra- structure?",
+            "B. Can Mike's organization make decisions about data\n that is part of its service, or does it belong to users?",
+            "C. Is the data located in a country subject \nto the laws of the country where it is stored?",
+            "D. Does data have rights on its own, or does the owner \nof the data determine what rights may apply to it?"
         ],
         "correct_option": 2
     },
@@ -1324,9 +1324,9 @@
         "question": "133. What are the key limiting factors for cryptography on low-power devices?",
         "options": [
             "A. There are system limitations on memory, CPU, and storage.",
-            "B. The devices cannot support public key encryption due to an inability to factor prime numbers.",
+            "B. The devices cannot support public key encryption\n due to an inability to factor prime numbers.",
             "C. There is a lack of chipset support for encryption.",
-            "D. Legal limitations for low-power devices prevent encryption from being supported."
+            "D. Legal limitations for low-power devices prevent\n encryption from being supported."
         ],
         "correct_option": 0
     },
@@ -1405,7 +1405,7 @@
         "options": [
             "A. Never allocate a variable any larger than is needed.",
             "B. Always check bounds on arrays.",
-            "C. Always declare a variable where you need it (i.e., at function or file level if possible).",
+            "C. Always declare a variable where you need it \n(i.e., at function or file level if possible).",
             "D. Make sure you release any memory you allocate."
         ],
         "correct_option": 3
@@ -1643,10 +1643,10 @@
     {
         "question": "165. Derek wants to explain the concept of resource constraints driving security constraints when using encryption. Which of the following descriptions best explains the trade-offs that he should explain to his management?",
         "options": [
-            "A. Stronger encryption requires more space on drives, meaning that the harder it is to break, the more storage you'll need, driving up cost.",
-            "B. Stronger encryption is faster, which means that using strong encryption will result in lower latency.",
-            "C. Stronger encryption requires more entropy. This may reduce the overall security of the system when entropy is exhausted.",
-            "D. Stronger encryption requires more computational resources, requiring a balance between speed and security."
+            "A. Stronger encryption requires more space on drives, meaning \nthat the harder it is to break, the more storage you'll need, driving up cost.",
+            "B. Stronger encryption is faster, which means that using \nstrong encryption will result in lower latency.",
+            "C. Stronger encryption requires more entropy. \nThis may reduce the overall security of the system when entropy is exhausted.",
+            "D. Stronger encryption requires more computational resources,\n requiring a balance between speed and security."
         ],
         "correct_option": 3
     },
@@ -1765,8 +1765,8 @@
         "options": [
             "A. Computer usage policies, network antimalware, and host antimalware",
             "B. Host antimalware and network antimalware",
-            "C. Host and network antimalware, computer usage policies, and website whitelisting",
-            "D. Host and network antimalware, computer usage policies, and employee training"
+            "C. Host and network antimalware, computer usage policies,\n and website whitelisting",
+            "D. Host and network antimalware, computer usage policies,\n and employee training"
         ],
         "correct_option": 3
     },
