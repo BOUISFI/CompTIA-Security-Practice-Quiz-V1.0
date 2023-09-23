@@ -1,0 +1,6 @@
+Python 3.x
+os
+tkinter
+json
+Pillow
+pygame==2.0.2
