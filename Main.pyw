@@ -456,13 +456,13 @@ def open_quiz_gui(chapter_data, chapter_name):
     screen_height = root.winfo_screenheight()
 
     # Calculate the x and y positions to center the window
-    x_position = (screen_width - 800) // 2
-    y_position = (screen_height - 500) // 6
+    x_position = (screen_width - 850) // 2
+    y_position = (screen_height - 650) // 6
 
     # Set the window's geometry to be centered on the screen
-    quiz_window.geometry("800x650+{}+{}".format(x_position, y_position))
+    quiz_window.geometry("850x650+{}+{}".format(x_position, y_position))
     quiz_window.configure(bg="white")
-    quiz_window.geometry("800x650")
+    quiz_window.geometry("850x650")
     quiz_window.resizable(False, False)  # Disable resizing
 
     #Class call
@@ -593,10 +593,6 @@ def generate_exam():
 
     # Initialize a variable to keep track of the current question number
     current_question_num = 0
-
-    # Create a label to display the current question number
-    question_number_label = tk.Label(full_exam_gui, text=f"Question {current_question_num + 1}", font=("Helvetica", 14))
-    question_number_label.pack()
 
     # Function to update the question number label
     def update_question_number():
