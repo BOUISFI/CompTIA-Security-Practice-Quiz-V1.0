@@ -1,6 +1,6 @@
 import os
 import tkinter as tk
-from tkinter import IntVar, font, ttk
+from tkinter import IntVar, font, ttk, simpledialog
 import json
 from PIL import Image, ImageTk
 import threading
@@ -506,7 +506,7 @@ def main_menu():
         "And let's start some classical music for you to enjoy while passing the quiz!\n\n"
         "Do you want me to proceed with the music 'Yes', or to stop it 'No'?",
     )
-
+    
     if choice == "no":
         mixer.music.pause()
     else:
@@ -536,8 +536,14 @@ def main_menu():
     explanation_label.pack(anchor="w", fill="both", padx=10, pady=0)
 
     root.configure(bg="white")
+
+    #Chapters Buttons with numb of questions
     for chapter, chapter_info in extracted_data.items():
-        chapter_button = tk.Button(root, text=chapter, command=lambda f=chapter_info["questions"], c=chapter: load_and_start_quiz(f, c),
+        with open(chapter_info["questions"], 'r') as json_file:
+            chapter_data = json.load(json_file)
+        num_questions = len(chapter_data)  # Count the number of questions
+        chapter_button = tk.Button(root, text=f"{chapter} ({num_questions} questions)",
+                                   command=lambda f=chapter_info["questions"], c=chapter: load_and_start_quiz(f, c),
                                    bg="red", fg="white", padx=10, pady=5)
         chapter_button.pack(pady=10, anchor=tk.W)
 
@@ -552,7 +558,11 @@ def main_menu():
 
 # Define the function to generate the exam
 def generate_exam():
-    total_questions = 10  # Total number of questions in the exam
+    # Prompt the user for the number of questions
+    num_questions = simpledialog.askinteger("Number of Questions", "Enter the number of questions for your full exam:")
+    
+    if num_questions is not None:
+        total_questions = num_questions  # Total number of questions in the exam
     exam_duration = 6  # Exam duration in minutes
 
     # Calculate the number of questions from each chapter based on chapter objectives percentage
@@ -595,7 +605,28 @@ def generate_exam():
 def load_and_start_quiz(filename, chapter_name):
     with open(filename, 'r') as json_file:
         chapter_data = json.load(json_file)
+    
+    total_questions = len(chapter_data)
+    
+    # Prompt the user for the number of questions within a specified range
+    while True:
+        num_questions = simpledialog.askinteger(
+            f"Number of Questions for {chapter_name}",
+            f"Enter the number of questions for {chapter_name} (1 - {total_questions}):",
+            minvalue=1, maxvalue=total_questions)
+        
+        if num_questions is None:
+            return  # User canceled, do nothing
+        
+        if num_questions > 0:
+            break
+    
+    # Limit the number of questions to the user's input
+    if total_questions > num_questions:
+        chapter_data = random.sample(chapter_data, num_questions)
+    
     open_quiz_gui(chapter_data, chapter_name)  # Pass both arguments
+
 
 #Main GUI banner and window
 if __name__ == "__main__":
