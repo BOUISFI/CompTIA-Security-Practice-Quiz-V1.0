@@ -54,6 +54,11 @@ class ChapterQuizGUI:
         question_font = ("Helvetica", 10, "bold")  # Custom font for the question text
         choice_font = ("Helvetica", 10)  # Custom font for the choice text
 
+        # Actual question Label
+        self.question_number_label = tk.Label(self.master, text="", bg="white", font=("Helvetica", 10, "bold italic"), fg="red", padx=10, pady=5, borderwidth=2, relief="groove")
+        self.question_number_label.pack(pady=5)
+
+
         # Set the background of the question label to white
         self.question_label = tk.Label(self.master, 
                                        text="", 
@@ -106,6 +111,11 @@ class ChapterQuizGUI:
                                        width=50)  # Adjust width as needed
         self.return_button.pack(side=tk.BOTTOM, pady=(0, 100))
         
+        # Add a "Go to End" button
+        self.go_to_end_button = tk.Button(self.master, text="Go to End", bg="orange", fg="black",
+                                          command=self.go_to_end, width=30)
+        self.go_to_end_button.pack(side=tk.BOTTOM, pady=10)
+
         #Submit Button
         self.submit_button = tk.Button(self.master, 
                                        text="Submit", 
@@ -205,6 +215,10 @@ class ChapterQuizGUI:
 
     #Show question function
     def show_question(self):
+
+        # Update the question number label
+        self.question_number_label.config(text=f"Question {self.current_question + 1} of {len(self.chapter_data)}")
+
         if self.current_question < len(self.chapter_data):
             question_data = self.chapter_data[self.current_question]
             question = question_data["question"]
@@ -253,9 +267,12 @@ class ChapterQuizGUI:
                 radio_button.config(state=tk.DISABLED)
 
             #Disable buttons    
-            self.submit_button.config(state=tk.DISABLED)
-            self.previous_button.config(state=tk.DISABLED)
-            self.next_button.config(state=tk.DISABLED)
+            self.submit_button.config(state=tk.DISABLED, bg="grey")
+            self.previous_button.config(state=tk.DISABLED, bg="grey")
+            self.next_button.config(state=tk.DISABLED, bg="grey")
+
+            self.question_number_label.pack_forget() #Disable question label
+            self.go_to_end_button.config(state=tk.DISABLED, bg="grey") #Desactivate end Button
 
             #Show Review button
             self.review_button = tk.Button(self.master, text="Review Answers", bg="gold", fg="black",
@@ -326,6 +343,17 @@ class ChapterQuizGUI:
             image_label.pack(pady=10)
         else:
             print("No image available for this question.")
+
+    # Function to finish the quiz
+    def go_to_end(self):
+        # Ask for confirmation before going to the end
+        confirmed = messagebox.askyesno("Confirmation", "Are you sure you want to go to the end? Your progress will be lost.")
+
+        if confirmed:
+            self.current_question = len(self.chapter_data)  # Go to the last question
+            self.question_number_label.pack_forget()  # Hide the current question label
+            self.show_question()  # Show the last question
+            self.go_to_end_button.config(state=tk.DISABLED, bg="grey") #Desactivate Button
 
     #Show Review function
     def review_answers(self):
@@ -456,13 +484,13 @@ def open_quiz_gui(chapter_data, chapter_name):
     screen_height = root.winfo_screenheight()
 
     # Calculate the x and y positions to center the window
-    x_position = (screen_width - 850) // 2
-    y_position = (screen_height - 650) // 6
+    x_position = (screen_width - 900) // 2
+    y_position = (screen_height - 750) // 6
 
     # Set the window's geometry to be centered on the screen
-    quiz_window.geometry("850x650+{}+{}".format(x_position, y_position))
+    quiz_window.geometry("900x750+{}+{}".format(x_position, y_position))
     quiz_window.configure(bg="white")
-    quiz_window.geometry("850x650")
+    quiz_window.geometry("900x750")
     quiz_window.resizable(False, False)  # Disable resizing
 
     #Class call
