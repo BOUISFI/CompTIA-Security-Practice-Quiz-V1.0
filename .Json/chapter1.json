@@ -701,7 +701,7 @@
         "correct_option": 0
     },
     {
-        "question": "71. Amanda scans a Red Hat Linux server that she believes is fully patched and discovers",
+        "question": "71. Amanda scans a Red Hat Linux server that she believes is fully patched and discovers that the Apache version on the server is reported as vulnerable to an exploit from a few month ago. When she checks to see if she is missing patches, Apache is fully patched. What has occurred ? ",
         "options": [
             "A. A false positive",
             "B. An automatic update failure",
@@ -2128,7 +2128,8 @@
             "C. Search for other compromised systems.",
             "D. Review IPS logs for attacks against the vulnerable plug-in."
         ],
-        "correct_option": 1
+        "correct_option": 1,
+		"image_filename": "images/chapter1/212.jpg"
     },
     {
         "question": "213. Carolyn runs a vulnerability scan of a network device and discovers that the device is running services on TCP ports 22 and 443. What services has she most likely discovered?",

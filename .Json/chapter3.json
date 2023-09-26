@@ -1613,7 +1613,7 @@
         "correct_option": 1
     },
     {
-        "question": "162. Patrick has been asked to identify a UTM appliance for his organization. Which of the fol-",
+        "question": "162. Patrick has been asked to identify a UTM appliance for his organization. Which of the following capabilities is not a common feature for UTM device ?",
         "options": [
             "A. IDS and or IPS",
             "B. Antivirus",
@@ -1704,7 +1704,7 @@
         "correct_option": 3
     },
     {
-        "question": "171. Which of the following access control methods grants permissions based on the user's posi- tion in thc organization?",
+        "question": "171. Which of the following access control methods grants permissions based on the user's position in thc organization?",
         "options": [
             "A. MAC",
             "B. RBAC",

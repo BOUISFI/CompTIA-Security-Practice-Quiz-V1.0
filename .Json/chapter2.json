@@ -600,7 +600,7 @@
         "correct_option": 1
     },
     {
-        "question": "61. You are responsible for database security at your company. You are concerned that program- mers might pass badly written SQL commands to the database, or that an attacker might exploit badly written SQL in applications. What is the best way to mitigate this threat?",
+        "question": "61. You are responsible for database security at your company. You are concerned that programmers might pass badly written SQL commands to the database, or that an attacker might exploit badly written SQL in applications. What is the best way to mitigate this threat?",
         "options": [
             "A. Formal code inspection",
             "B. Programming policies",
